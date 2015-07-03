@@ -11,7 +11,7 @@ func main() {
     router := gin.Default()
 
     // load the dang templates
-    router.LoadHTMLGlob("templates/*")
+    router.LoadHTMLGlob("templates/*.html")
     router.Static("/static", "static")
     //routerouter.LoadHTMLFiles("templates/template1.html", "templates/template2.html")
 
