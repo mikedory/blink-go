@@ -22,11 +22,11 @@
 		</div>
 	</div><!-- end main -->
 
-	{% if (twitter_handle != False) %}
-	<footer>
+<!--
+ 	<footer>
 		<p><a href="http://twitter.com/{{ .twitter_handle }}">@{{ .twitter_handle }}</a> likes blinky things.</p>
 	</footer>
-	{% end %}
+ -->
 
 	<!-- Load jQuery -->
 	<script src="http://www.google.com/jsapi"></script>
@@ -41,7 +41,6 @@
 	<!-- main script -->
 	<script src="/static/js/script.js"></script>
 
-	{% if (google_analytics_id != False) %}
 	<!-- analytic party -->
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];
@@ -53,7 +52,6 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 	</script>
-	{% end %}
 
 	</body>
 </html>
