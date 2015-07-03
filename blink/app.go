@@ -9,20 +9,19 @@ func main() {
 
     // fire this up
     router := gin.Default()
+    router.Use(gin.Logger())
 
     // load the dang templates
     router.LoadHTMLGlob("templates/*.html")
     router.Static("/static", "static")
-    //routerouter.LoadHTMLFiles("templates/template1.html", "templates/template2.html")
 
     // handle root
     router.GET("/", func(c *gin.Context) {
         c.String(http.StatusOK, "wat")
     })
-
     
     // check the incoming phrase
-    router.GET("/:phrase", func(c *gin.Context) {
+    router.GET("/blink/:phrase", func(c *gin.Context) {
         phrase := c.Param("phrase")  
         c.HTML(http.StatusOK, "main.html", gin.H{
             "title": "Main website",
