@@ -3,6 +3,7 @@ package main
 import (
     "net/http"
     "github.com/gin-gonic/gin"
+    // "github.com/gin-gonic/contrib/static"
 )
 
 func main() {
@@ -13,6 +14,7 @@ func main() {
 
     // load the dang templates
     router.LoadHTMLGlob("templates/*.html")
+    // router.Use(static.Serve("/static", static.LocalFile("html", false)))
     router.Static("/static", "static")
 
     // handle root
