@@ -26,7 +26,7 @@ func main() {
     router.GET("/blink/:phrase", func(c *gin.Context) {
         phrase := c.Param("phrase")  
         c.HTML(http.StatusOK, "main.html", gin.H{
-            "title": "Main website",
+            "title": phrase,
             "phrase": phrase,
             "twitter_handle": "mike_dory",
             "google_analytics_id": "XXXXX-XX",
